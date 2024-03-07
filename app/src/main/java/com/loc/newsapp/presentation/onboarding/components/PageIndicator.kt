@@ -19,8 +19,8 @@ fun PageIndicator(
     modifier: Modifier = Modifier,
     pageSize: Int,
     selectedPage: Int,
-    selectedColor: Color = MaterialTheme.colorScheme.primary,
-    unselectedColor: Color
+    selectedColor: Color =MaterialTheme.colorScheme.primary,
+    unselectedColor: Color = MaterialTheme.colorScheme.secondary
 ) {
     Row(modifier = modifier, horizontalArrangement = Arrangement.SpaceBetween) {
         repeat(pageSize) {page ->
@@ -37,6 +37,6 @@ fun PageIndicator(
 @Composable
 fun PageIndicatorPreview() {
     NewsAppTheme {
-        PageIndicator(pageSize = 1, selectedPage = 1, unselectedColor = Color.Red)
+        PageIndicator(pageSize = 1, selectedPage = 1, selectedColor = Color.Red)
     }
 }
